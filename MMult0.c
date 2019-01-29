@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
   const long PLAST = 600;
   const long PINC = 20;
 
-  printf(" Dimension       Time    Gflop/s\n");
+  printf(" Dimension       Time    Gflop/s       GB/s\n");
   for (long p = PFIRST; p < PLAST; p += PINC) {
     long m = p, n = p, k = p;
     double* a = (double*) malloc(m * k * sizeof(double)); // m x k
@@ -52,7 +52,8 @@ int main(int argc, char** argv) {
     }
     double time = t.toc();
     double flops = 0; // TODO: calculate from m, n, k, NREPEATS, time
-    printf("%10d %10f %10f\n", p, time, flops);
+    double bandwidth = 0; // TODO: calculate from m, n, k, NREPEATS, time
+    printf("%10d %10f %10f %10f\n", p, time, flops, bandwidth);
 
     free(a);
     free(b);
