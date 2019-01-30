@@ -3,7 +3,7 @@
 // + Specify the the compiler version (using the command: "g++ -v")
 // + Try to find out the frequency, the maximum flop-rate and the maximum main
 //   memory bandwidth for your processor.
-// $ g++ -O3 -std=c++11 MMult0.c && ./a.out
+// $ g++ -O3 -std=c++11 MMult0.cpp && ./a.out
 
 #include <stdio.h>
 #include "utils.h"
